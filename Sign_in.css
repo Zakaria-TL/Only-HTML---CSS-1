@@ -1,0 +1,203 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:"Sign_in_path Sign_in_path Sign_in_path Sign_in_path page_content page_content page_content page_content page_content page_content page_content page_content";  
+
+}
+:root{
+    --primary-color:#1877f2;
+}
+.Sign_in_path{
+    /* width: 25%; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    grid-area: Sign_in_path;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Sign_in_path::selection{
+    background-color: white;
+    color: var(--primary-color);
+}
+.sign_in_button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_in_button button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    padding: 15px;
+    width: 200px;
+    border: none;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 500ms;
+}
+ .sign_in_button button:hover{
+    box-shadow: 0 0 0 2px white;
+    transform: scale(1.1);
+}
+.descripe_2{
+    font-size: 20px;
+    padding: 10px; 
+    margin: 10px;
+    text-align: center;
+
+}
+.title2{
+    text-align: center;
+    color: white;
+
+}
+.title1{
+    color: var(--primary-color);
+}
+.page_content{
+    min-height: 100vh;
+    /* width: 75%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: page_content;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.name,
+.email,
+.password{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+.inputs input{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 15px;
+    padding-left: 35px;
+    width: 300px;
+    border: none;
+    background-color: #f0f2f5;
+    transition-duration: 500ms;
+}
+.inputs input:focus{
+    outline: none;
+    box-shadow: 0 0 0 2px #8ab4f8;
+}
+
+
+.submit{
+    margin: 10px;
+}
+.inputs button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    padding: 15px;
+    width: 200px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+.inputs button:hover{
+    box-shadow: 0 0 0 2px #8ab4f8;
+    transform: scale(1.1);
+}   
+.title1{
+    grid-area: title1;
+    margin: 10px;
+}
+.social_media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+.fa {
+  padding: 10px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: title1;
+  transition-duration: 500ms;
+  
+
+}
+
+.fa-facebook:hover {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+.fa-google:hover {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+.fa-linkedin:hover {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.fa-facebook {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa-google {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.fa-linkedin{
+    background: white;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon {
+  padding: 10px;
+  background: transparent;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -1px;
+  cursor: text;
+}
