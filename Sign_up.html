@@ -1,53 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Sign_up.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="Sign_up.css" />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document
+        .querySelector(".submit button")
+        .addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const email = document.getElementById("username").value; // تأكد أن المستخدم يدخل الإيميل هنا
+          const password = document.getElementById("password").value;
+
+          if (!email || !password) {
+            alert("Fill all fields");
+            return;
+          }
+
+          try {
+            const res = await fetch("http://localhost:3000/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password }),
+            });
+
+            const data = await res.json();
+            alert(data.message);
+            if (data.message === "Login success") {
+              alert("Welcome to the app!");
+            }
+          } catch (error) {
+            alert("Could not connect to server");
+          }
+        });
+    });
+  </script>
+  <body>
     <form action="page_content">
-        <div class="sign-in-content">
-            <div class="title1">
-                <h1>Sign in</h1>
-            </div>
-            <div class="social_media">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-google"></a>
-                <a href="#" class="fa fa-linkedin"></a> 
-            </div>
-            <div class="inputs">
-                <div class="name">
-                    <label for="username">
-                        <i class="fa fa-user icon"></i>
-                    </label>
-                    <input type="text" placeholder="Username or email" id="username">
-                </div>
-                <div class="password">
-                    <label for="password">
-                        <i class="fa fa-lock icon"></i>
-                    </label>
-                    <input type="password" placeholder="Password" id="password">
-                </div>
-                <div class="submit">
-                    <button>Sign in</button>
-                </div>
-            </div>
-       </div> 
-       <div class="sign-up-path">
+      <div class="sign-in-content">
+        <div class="title1">
+          <h1>Sign in</h1>
+        </div>
+        <div class="social_media">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+        <div class="inputs">
+          <div class="name">
+            <label for="username">
+              <i class="fa fa-user icon"></i>
+            </label>
+            <input type="text" placeholder="Username or email" id="username" />
+          </div>
+          <div class="password">
+            <label for="password">
+              <i class="fa fa-lock icon"></i>
+            </label>
+            <input type="password" placeholder="Password" id="password" />
+          </div>
+          <div class="submit">
+            <button>Sign in</button>
+          </div>
+        </div>
+      </div>
+      <div class="sign-up-path">
         <div class="title2">
-            <h1>You have an account</h1>
+          <h1>You have an account</h1>
         </div>
         <div class="description">
-            <p>Hello there, sign up with your email and password</p>
+          <p>Hello there, sign up with your email and password</p>
         </div>
         <div class="submit2">
-            <button type="button" onclick="location.href='Sign_in.html'">Sign up</button>
+          <button type="button" onclick="location.href = 'Sign_in.html'">
+            Sign up
+          </button>
         </div>
-       </div>    
+      </div>
     </form>
-    
-</body>
+  </body>
 </html>

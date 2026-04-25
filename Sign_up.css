@@ -1,132 +1,131 @@
-body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;  
-    overflow: hidden;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
 }
-form{
-        display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:"sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-up-path sign-up-path sign-up-path sign-up-path";
+form {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-in-content sign-up-path sign-up-path sign-up-path sign-up-path";
 }
-:root{
-    --primary-color:#1877f2;
+:root {
+  --primary-color: #1877f2;
 }
-.sign-in-content{
-    /* width: 25%; */
-    min-height: 100vh;
-    position: relative;
-    grid-area: sign-in-content;
-    background-color: white;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.sign-in-content {
+  /* width: 25%; */
+  min-height: 100vh;
+  position: relative;
+  grid-area: sign-in-content;
+  background-color: white;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.sign-up-path{
-    /* width: 25%; */
-    min-height: 100vh;
-    position: relative;
-    grid-area: sign-up-path;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items: center;
+.sign-up-path {
+  /* width: 25%; */
+  min-height: 100vh;
+  position: relative;
+  grid-area: sign-up-path;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.sign-in-content::selection{
-    background-color: var(--primary-color);
-    color: white;
+.sign-in-content::selection {
+  background-color: var(--primary-color);
+  color: white;
 }
-.sign-up-path::selection{
-    background-color: white;
-    color: var(--primary-color);
+.sign-up-path::selection {
+  background-color: white;
+  color: var(--primary-color);
 }
-.sign-in-content button{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
-    padding: 15px;
-    margin-top: 10px;
-    width: 200px;
-    border: none;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 100px;
-    cursor: pointer;
-    transition-duration: 500ms;
+.sign-in-content button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  padding: 15px;
+  margin-top: 10px;
+  width: 200px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  transition-duration: 500ms;
 }
-.sign-in-content button:hover{
-    box-shadow: 0 0 0 2px #8ab4f8;
-    transform: scale(1.1);
+.sign-in-content button:hover {
+  box-shadow: 0 0 0 2px #8ab4f8;
+  transform: scale(1.1);
 }
-.sign-up-path button{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
-    padding: 15px;
-    width: 200px;
-    border: none;
-    background-color: white;
-    color: var(--primary-color);
-    border-radius: 100px;
-    cursor: pointer;
-    transition-duration: 500ms;
+.sign-up-path button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  padding: 15px;
+  width: 200px;
+  border: none;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 100px;
+  cursor: pointer;
+  transition-duration: 500ms;
 }
-.sign-up-path button:hover{
-    box-shadow: 0 0 0 2px white;
-    transform: scale(1.1);
+.sign-up-path button:hover {
+  box-shadow: 0 0 0 2px white;
+  transform: scale(1.1);
 }
-.description{
-    font-size: 20px;
-    padding: 10px; 
-    margin: 10px;
-    text-align: center;
+.description {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }
-.inputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 .name,
-.password{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 10px;
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px;
 }
-.inputs input{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 15px;
-    padding-left: 35px;
-    width: 300px;
-    border: none;
-    background-color: #f0f2f5;
-    transition-duration: 500ms;
+.inputs input {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 15px;
+  padding-left: 35px;
+  width: 300px;
+  border: none;
+  background-color: #f0f2f5;
+  transition-duration: 500ms;
 }
-.inputs input:focus{
-    outline: none;
-    box-shadow: 0 0 0 2px #8ab4f8;
+.inputs input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #8ab4f8;
 }
-.title1{
-    margin: 10px;
+.title1 {
+  margin: 10px;
 }
-.title2{
-    text-align: center;
-    color: white;   
+.title2 {
+  text-align: center;
+  color: white;
 }
-.social_media{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
+.social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
-
 
 .fa {
   padding: 10px;
@@ -166,11 +165,11 @@ form{
   border-radius: 50%;
   cursor: pointer;
 }
-.fa-linkedin{
-    background: white;
-    color: black;
-    border-radius: 50%;
-    cursor: pointer;
+.fa-linkedin {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .icon {
   padding: 10px;
